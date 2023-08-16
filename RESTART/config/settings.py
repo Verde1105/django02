@@ -27,7 +27,7 @@ SECRET_KEY = '5889^4cnaf8nv#zhk+x5($(hvezd&d2rw^owdksqdf%0)mqxn1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 #mkdir '폴더명' : 디렉터리 만드는 명령어.
 
