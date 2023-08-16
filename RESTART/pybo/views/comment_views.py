@@ -20,8 +20,10 @@ def comment_create_question(request, question_id):
             comment = form.save(commit=False)
             comment.author = request.user
             comment.create_date = timezone.now()
+            comment.question = question #
             comment.save()
-            return redirect('{}#comment_{}'.format(resolve_url('pybo:detail', question_id=comment.question.id), comment.id))
+            print("comment.question : ",comment)
+            return redirect('{}#comment_{}'.format(resolve_url('pybo:detail', question_id=question.id), comment.id))
         
     else :
         form = CommentForm()
